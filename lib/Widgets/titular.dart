@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/widgets.dart';
 
 class Titular extends StatelessWidget {
   const Titular({super.key});
@@ -7,10 +7,31 @@ class Titular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: Color.fromARGB(255, 141, 47, 47),
+      child: const Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding( 
+            padding: const EdgeInsets.all(30.0),
+            child: SizedBox(
+                    
+              width: 300,
+              child: Text(
+                "La grandeza requiere muchas cosas, pero no necesita público",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 30,
+                  color: Color.fromARGB(255, 0, 0, 0),
+
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
-      height: 300,
+      decoration: const BoxDecoration(
+        color: Color(0xFFEBE6D0),
+      ),
+      //height: 300,
       width: double.infinity,
     );
   }

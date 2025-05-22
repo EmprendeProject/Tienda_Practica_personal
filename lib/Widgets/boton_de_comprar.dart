@@ -13,7 +13,8 @@ class BotonComprar extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 0),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.deepPurple,
+            backgroundColor: Colors.amber[700],
+            
             shape: const StadiumBorder(),
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 25),
           ),

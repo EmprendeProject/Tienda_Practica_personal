@@ -11,10 +11,10 @@ class Filtro extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 77, 0, 186),
+          color: Color(0xf2eddb),
           borderRadius: BorderRadius.circular(60),
           border: Border.all(
-            color: const Color.fromARGB(255, 255, 0, 0),
+            color: Color.fromARGB(255, 255, 255, 255),
             width: 3,
           ),
         ),
@@ -23,7 +23,7 @@ class Filtro extends StatelessWidget {
         alignment: Alignment.center, // Asegura que el icono esté centrado
         child: const Icon(
           Icons.filter_alt_rounded,
-          color: Colors.white,
+          color: Color.fromARGB(255, 52, 52, 52),
           size: 40,
         ),
       ),

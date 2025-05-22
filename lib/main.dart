@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'tienda practica',
+      title: 'Emprendy.App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'tienda practica'),
+      home: const MyHomePage(title: 'Emprendy.App'),
     );
   }
 }
@@ -37,9 +37,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFEBE6D0),
+      
       appBar: AppBar(
         // El Drawer debe ir en el Scaffold, no en el AppBar
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: const Color(0xFFEBE6D0),
         title: Text(widget.title),
       ),
       drawer: Drawer(), // Mueve el Drawer aquí

@@ -10,7 +10,7 @@ class BarraSugerencias extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 111, 74, 74),
+        //color: Color.fromARGB(255, 111, 74, 74),
       ),
       height: 100,
       width: double.infinity,
@@ -25,6 +25,7 @@ class BarraSugerencias extends StatelessWidget {
           Filtro(),
           Filtro(),
           Filtro(),
+          
 
           // Aquí puedes agregar widgets hijos para la barra de sugerencias
         ],

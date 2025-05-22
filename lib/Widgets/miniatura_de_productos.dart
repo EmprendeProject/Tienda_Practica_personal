@@ -11,10 +11,10 @@ class ProductosMiniatura extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 77, 0, 186),
+          color: Color(0xFFEEECDB),
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
-            color: const Color.fromARGB(255, 255, 0, 0),
+            color: Color.fromARGB(255, 255, 255, 255),
             width: 3,
           ),
         ),
@@ -28,12 +28,12 @@ class ProductosMiniatura extends StatelessWidget {
                 height: 100,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 98, 88, 111),
+                  color: Color.fromARGB(255, 199, 199, 199),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: const Icon(
                   Icons.add_a_photo,
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 0, 0, 0),
                   size: 40,
                 ),
               ),
@@ -44,7 +44,7 @@ class ProductosMiniatura extends StatelessWidget {
               child: const Text(
                 "Zapato",
                 textAlign: TextAlign.start,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
               ),
             ),
             // ignore: prefer_const_constructors
@@ -53,10 +53,10 @@ class ProductosMiniatura extends StatelessWidget {
               // ignore: prefer_const_constructors
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text("5.5", style: TextStyle(color: Colors.white)),
+                children: [
+                  Text("5.5", style: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
                   SizedBox(width: 50),
-                  Icon(Icons.add_circle_rounded, color: Colors.white),
+                  Icon(Icons.add_circle_rounded, color: Colors.amber[600]),
                 ],
               ),
             ),
