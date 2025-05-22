@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tienda_practica1/Widgets/barra_de_sugerencias.dart';
 import 'package:tienda_practica1/Widgets/boton_de_comprar.dart';
+import 'package:tienda_practica1/Widgets/lista_de_productos.dart';
 import 'package:tienda_practica1/Widgets/miniatura_de_productos.dart';
 import 'package:tienda_practica1/Widgets/titular.dart';
 
@@ -46,10 +47,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       drawer: Drawer(), // Mueve el Drawer aquí
       body: Column(
-        children: const [
+        children: [
           Titular(),
           BarraSugerencias(),
-          ProductosMiniatura(),
+          Expanded(child: Lista_productos()), // Aquí va el Expanded
         ],
       ),
       floatingActionButton: BotonComprar(), // <-- Aquí va tu botón
@@ -57,5 +58,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
 

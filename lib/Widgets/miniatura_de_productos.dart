@@ -8,17 +8,19 @@ class ProductosMiniatura extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(10.0),
       child: Container(
         decoration: BoxDecoration(
+          
           color: Color(0xFFEEECDB),
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
             color: Color.fromARGB(255, 255, 255, 255),
+          
             width: 3,
           ),
         ),
-        width: 130,
+      
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start, // <-- Esto alinea a la izquierda
           children: [
@@ -54,8 +56,8 @@ class ProductosMiniatura extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("5.5", style: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
-                  SizedBox(width: 50),
+                  Text("5.5", style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontWeight: FontWeight.bold)),
+                  SizedBox(width: 100),
                   Icon(Icons.add_circle_rounded, color: Colors.amber[600]),
                 ],
               ),
