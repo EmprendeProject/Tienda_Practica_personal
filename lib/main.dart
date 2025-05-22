@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tienda_practica1/Widgets/barra_de_sugerencias.dart';
+import 'package:tienda_practica1/Widgets/boton_de_comprar.dart';
+import 'package:tienda_practica1/Widgets/miniatura_de_productos.dart';
+import 'package:tienda_practica1/Widgets/titular.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,17 +11,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'tienda practica',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'tienda practica'),
     );
   }
 }
@@ -32,48 +34,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-
-      
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
       appBar: AppBar(
-
+        // El Drawer debe ir en el Scaffold, no en el AppBar
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
         title: Text(widget.title),
-      ),  
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-
-          ],
-        ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      drawer: Drawer(), // Mueve el Drawer aquí
+      body: Column(
+        children: const [
+          Titular(),
+          BarraSugerencias(),
+          ProductosMiniatura(),
+        ],
+      ),
+      floatingActionButton: BotonComprar(), // <-- Aquí va tu botón
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat, // Opcional: lo centra abajo
     );
   }
 }
+
+
