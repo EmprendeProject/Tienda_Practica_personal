@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
 class Filtro extends StatelessWidget {
-  const Filtro({
+  
+  const Filtro( {
+    
+
+    
     super.key,
+    
+    var icono = Icons.filter_alt_rounded
+    
+
   });
 
   @override

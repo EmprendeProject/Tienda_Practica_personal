@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tienda_practica1/Widgets/factura_total.dart';
 
 class BotonComprar extends StatelessWidget {
   const BotonComprar({
@@ -14,13 +15,24 @@ class BotonComprar extends StatelessWidget {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.amber[700],
-            
             shape: const StadiumBorder(),
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 25),
           ),
           onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('¡Compra realizada!')),
+            showModalBottomSheet(
+              
+              showDragHandle: true,
+              //barrierColor: Colors.amberAccent,
+
+              isScrollControlled: true,
+              backgroundColor: const Color(0xFF3C3C3C),
+              context: context,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+              ),
+              builder: (context) {
+                return Factura_total();
+              },
             );
           },
           child: Row(
@@ -30,17 +42,12 @@ class BotonComprar extends StatelessWidget {
                 'Comprar',
                 style: TextStyle(color: Colors.white),
               ),
-              
-              SizedBox(width: 270,),
-
+              SizedBox(width: 16),
               Icon(Icons.shopping_cart, color: Colors.white),
-              SizedBox(width: 8),
-              
             ],
           ),
-        ), 
+        ),
       ),
     );
   }
 }
-
