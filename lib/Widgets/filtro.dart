@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 
 class Filtro extends StatelessWidget {
   
-  const Filtro( {
+  final Widget fotografia ;
+
+  
+  
+  Filtro( {
     
+    required this.fotografia,
 
     
     super.key,
     
-    var icono = Icons.filter_alt_rounded
     
 
   });
@@ -16,7 +20,7 @@ class Filtro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
           color: Color(0xf2eddb),
@@ -29,13 +33,13 @@ class Filtro extends StatelessWidget {
         height: 70,
         width: 70,
         alignment: Alignment.center, // Asegura que el icono esté centrado
-        child: const Icon(
-          Icons.filter_alt_rounded,
-          color: Color.fromARGB(255, 52, 52, 52),
-          size: 40,
+        child: Container(
+          height: 35,
+          child: fotografia,
         ),
-      ),
-    );
+        
+      ));
+    
   }
 }
 

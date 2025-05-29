@@ -18,14 +18,14 @@ class BarraSugerencias extends StatelessWidget {
 
 
       child: Row(
-        children: const [
+        children: [
 
-          Filtro(),
-          Filtro(),
-          Filtro(),
-          Filtro(),
-          Filtro(),
-          
+          Filtro(fotografia: Image.asset("assets/icons/filtrar.png",)),
+          Filtro(fotografia: Image.asset("assets/icons/camisa.png",)),
+          Filtro(fotografia: Image.asset("assets/icons/chaqueta.png",)),
+          Filtro(fotografia: Image.asset("assets/icons/corto.png",)),
+          Filtro(fotografia: Image.asset("assets/icons/zapatos.png",)),
+
 
           // Aquí puedes agregar widgets hijos para la barra de sugerencias
         ],
